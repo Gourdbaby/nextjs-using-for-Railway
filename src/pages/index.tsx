@@ -58,35 +58,36 @@ const AddTodoInput = () => {
     >
       <input
         className={styles.input}
-        placeholder="Buy some milk"
+        placeholder="what do you want to know?"
         value={text}
         onChange={e => setText(e.target.value)}
       />
-      <button className={styles.addButton}>Add</button>
+      <button className={styles.addButton}>Ask Chatgpt</button>
     </form>
   );
 };
+
+const ContentArea = () => {
+  return (
+    <div className={styles.contentarea}>
+      123
+    </div>
+  )
+}
 
 const Home: NextPage = () => {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Railway NextJS Prisma</title>
+        <title>Chatgpt from Gourdbaby</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <header className={styles.header}>
-        <h1 className={styles.title}>Todos</h1>
-        <h2 className={styles.desc}>
-          NextJS app connected to Postgres using Prisma and hosted on{" "}
-          <a href="https://railway.app">Railway</a>
-        </h2>
-      </header>
+      <ContentArea></ContentArea>
 
       <main className={styles.main}>
         <AddTodoInput />
-
-        <TodoList />
+        {/* <TodoList /> */}
       </main>
     </div>
   );

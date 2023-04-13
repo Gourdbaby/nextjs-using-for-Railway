@@ -8,7 +8,7 @@ export const useTodos = () => useSWR<Todo[]>(todoPath);
 export const createTodo = async (text: string) => {
   mutate(
     todoPath,
-    todos => [{ text, completed: false, id: "new-todo" }, ...todos],
+    todos => [{ text, completed: false, id: "new-todo" }],
     false,
   );
   await fetch(todoPath, {
